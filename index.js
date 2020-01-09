@@ -115,7 +115,6 @@ function handle(position, numberAdd) {
   }
   return result;
 }
-
 //cau 4:
 
 function divSix() {
