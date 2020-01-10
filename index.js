@@ -94,7 +94,7 @@ function numberToAdd(sumDigits) {
       result += i + "";
     }
   } else {
-    temp = (3 - (sumDigits % 3));
+    temp = 3 - (sumDigits % 3);
     for (var i = temp; i <= 9; i += 3) {
       result += i + "";
     }
