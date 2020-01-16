@@ -113,6 +113,6 @@ function handelDisabledProduct(listCart) {
 }
 
 showListProduct(listProduct);
-//handelDisabledProduct(listCart);
 listenListProduct(listProduct);
 handelDisabledProduct(listCart);
+document.getElementById("number-cart").innerHTML = listCart.length;
