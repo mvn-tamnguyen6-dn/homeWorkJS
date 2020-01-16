@@ -1,0 +1,52 @@
+.main-content {
+  min-height: 202px;
+}
+
+.main-content-cart-list {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  border: 1px solid rgb(252, 244, 244);
+  list-style: none;
+  padding-left: 0px;
+  height: 90%;
+}
+
+.main-content-cart-list li {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+table#tableListCart tr:nth-child(even) {
+  background-color: #eee;
+}
+
+table#tableListCart tr:nth-child(odd) {
+  background-color: rgba(110, 126, 219, 0.144);
+}
+
+table#tableListCart th {
+  background-color: rgb(235, 133, 133);
+  color: white;
+}
+
+.header-top-logo-content-link {
+  text-decoration: none;
+  color: black;
+}
