@@ -80,14 +80,16 @@ function showListProduct(listProduct) {
 
 function listenListProduct(listProduct) {
 
-  for (let index = 0; index < listProduct.length; index++) {
+  for (var index = 0; index < listProduct.length; index++) {
     const element = listProduct[index];
     idProduct = element.idProduct;
     elementClickProduct.push(document.getElementById(idProduct));
     elementClickProduct[index].addEventListener("click", function() {
-      elementClickProduct[index].disabled = true;
-      elementClickProduct[index].style.backgroundColor = "rgb(184, 137, 216)";
-      idProductCart = elementClickProduct[index].id;
+      var idElement = this.id;
+      var i = idElement.charAt(idElement.length - 1) - 1;
+      elementClickProduct[i].disabled = true;
+      elementClickProduct[i].style.backgroundColor = "rgb(184, 137, 216)";
+      idProductCart = elementClickProduct[i].id;
       listCart.push(getProductCart(idProductCart));
       localStorage.setItem("listCart", JSON.stringify(listCart));
       document.getElementById("number-cart").innerHTML = listCart.length;

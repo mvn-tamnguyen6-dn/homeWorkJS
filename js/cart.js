@@ -38,29 +38,26 @@ function showListCart(listCart) {
       '</tr>';
   }
   elementString += '<tr>' +
-    '<td></td>' +
-    '<td></td>' +
-    '<td></td>' +
-    '<td></td>' +
+    '<td colspan="3"></td>' +
+    '<td>Total</td>' +
     '<td id="TotalProduct"></td>' +
     '<td></td>' +
     '</tr>';
   elementString += '</table>';
   elementCartProduct.innerHTML = elementString;
-
 }
-showListCart(listCart);
-creatListener(listCart);
-handelClickNumber(listElementClickNumber);
-handelClickRemove(listElementRemove);
 
-// function totalPriceAllProduct(listCart) {
-//   for (let index = 0; index < listCart.length; index++) {
-//     const element = listCart[index];
-//     listElementSubTotal[index].
-//     return 
-//   }
-// }
+function totalPriceAllProduct(listCart) {
+  var sumAllProduct = 0;
+  var subTotal = 0;
+  var strSubTotal = 0;
+  for (let index = 0; index < listCart.length; index++) {
+    strSubTotal = listElementSubTotal[index].textContent;
+    subTotal = strSubTotal.slice(0, strSubTotal.length - 1);
+    sumAllProduct += parseInt(subTotal);
+  }
+  document.getElementById("TotalProduct").innerHTML = sumAllProduct + "đ";
+}
 
 function creatListener(listCart) {
   for (var index = 0; index < listCart.length; index++) {
@@ -73,12 +70,16 @@ function creatListener(listCart) {
 }
 
 function handelClickNumber(listElementClickNumber) {
-  for (let index = 0; index < listElementClickNumber.length; index++) {
+  for (var index = 0; index < listElementClickNumber.length; index++) {
     var element = listElementClickNumber[index];
     element.addEventListener("click", function() {
-      listElementSubTotal[index].innerHTML = getSuTotal(index) + "đ";
+      var idElement = this.id;
+      var i = idElement.charAt(idElement.length - 1) - 1;
+      listElementSubTotal[i].innerHTML = getSuTotal(i) + "đ";
+      totalPriceAllProduct(listCart);
     });
   }
+
 }
 
 function getSuTotal(index) {
@@ -86,14 +87,24 @@ function getSuTotal(index) {
 }
 
 function handelClickRemove(listElementRemove) {
-  for (let index = 0; index < listElementRemove.length; index++) {
+  for (var index = 0; index < listElementRemove.length; index++) {
     var element = listElementRemove[index];
     var temp = 0;
     element.addEventListener("click", function() {
-      listCart.splice(index - temp, 1);
-      document.getElementById("cart" + (index + 1)).remove();
+      var idElement = this.id;
+      var i = idElement.charAt(idElement.length - 1) - 1;
+      listCart.splice(i - temp, 1);
+      document.getElementById("cart" + (i + 1)).remove();
       localStorage.setItem("listCart", JSON.stringify(listCart));
+      totalPriceAllProduct(listCart);
       temp++;
     });
   }
+
 }
+
+showListCart(listCart);
+creatListener(listCart);
+handelClickNumber(listElementClickNumber);
+handelClickRemove(listElementRemove);
+totalPriceAllProduct(listCart);
