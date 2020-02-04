@@ -1,0 +1,314 @@
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0px;
+  border: 0px;
+}
+
+body {
+  margin: 0px 150px;
+}
+
+.header-top-right {
+  transform: translateY(50%);
+  display: flex;
+}
+
+.header-top-right i {
+  border: 1px solid #62c6f8;
+  color: #62c6f8;
+  size: 10px;
+  border-radius: 50%;
+  height: fit-content;
+  padding: 3px;
+}
+
+.header-top-left {
+  display: flex;
+  margin-top: 10px;
+}
+
+.header-top-left img {
+  float: left;
+}
+
+.header-top-logo-content {
+  float: left;
+}
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: auto 150px;
+  border: 1px solid rgb(212, 212, 212);
+  box-sizing: border-box;
+}
+
+.header-top::after {
+  content: "";
+  clear: both;
+  display: table;
+  height: 20px;
+}
+
+.header-bottom-menu ul {
+  height: 100%;
+}
+
+.header-bottom-menu ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.header-bottom-menu ul::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.header-bottom-icon i {
+  border: 1px solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 6px 0px 6px 5px;
+  float: right;
+}
+
+.fa-google {
+  color: rgb(247, 54, 63);
+  padding: 5px 6px;
+}
+
+.fa-facebook {
+  color: blue;
+  padding: 5px 8px;
+}
+
+.fa-youtube {
+  color: rgb(247, 54, 63);
+  padding: 5px;
+}
+
+.header-bottom::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.main-slide {
+  position: relative;
+  left: -150px;
+}
+
+.main-slide img {
+  width: 100vw;
+}
+
+.main-slide ul {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  list-style-type: none
+}
+
+.main-slide li,
+span {
+  float: left;
+  margin-left: 10px;
+}
+
+.main-slide::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-bottom: 40px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  box-sizing: border-box;
+  grid-gap: 20px;
+}
+
+.main-content-left {}
+
+.main-content-left ul {
+  padding-left: 28px;
+}
+
+.main-content-left li {
+  margin: 10px 0px;
+}
+
+.main-content-left a {
+  text-decoration: none;
+  color: black;
+}
+
+.main-content-left h4 {
+  background-color: #6a79819a;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.main-content-left-menu::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-bottom: 40px;
+}
+
+.main-content-left-form {
+  background-color: #6a79819a;
+}
+
+.main-content-left-form>form {
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.main-content-left-form>form>input {
+  margin: 10px 0px;
+  height: 30px;
+  width: 100%;
+}
+
+.main-content-left-form>form>button {
+  background-color: rgb(63, 177, 63);
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin-left: 35%;
+}
+
+.main-content-right {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  box-sizing: border-box;
+  grid-gap: 20px;
+  width: 100%;
+}
+
+.main-content-right img {
+  max-width: 100%;
+}
+
+.main-content::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-bottom: 20px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: rgba(89, 208, 230, 0.671);
+  width: 100vw;
+  position: absolute;
+  left: 0px;
+  padding-left: 150px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer ul {
+  padding-left: 18px;
+}
+
+footer li {
+  margin: 10px 0px;
+}
+
+.footer-content::after {
+  content: "";
+  clear: both;
+  display: table;
+  border-top: 1px solid white;
+}
+
+
+/* 
+
+
+
+
+
+.header-top-left-logo{
+
+} */
+
+.header-top-left-logo {
+  max-width: 100px;
+}
+
+.header-top {
+  display: grid;
+  grid-template-columns: auto 70%;
+}
+
+.header-bottom-menu {
+  right: 0px;
+}
+
+.header-bottom-menu a {
+  float: left;
+  text-decoration: none;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.main-share-me {
+  text-align: center;
+  font-size: 25px;
+}
+
+.maim-share-me-icon {
+  font-size: 25px;
+  text-align: center;
+}
+
+.main-comment {
+  font-size: 25px;
+}
+
+.main-comment-avatar-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+
+.main-comment-item {
+  margin-bottom: 10px;
+}
+
+.main-comment-input {
+  width: 91%;
+  border: 1px solid black;
+  height: 100px;
+  resize: none;
+}
+
+.main-comment-input-icon {
+  position: absolute;
+  transform: translate(-130%, 15%);
+}
+
+.main-comment-input-icon:hover {
+  color: #62c6f8;
+}
+
+.main-comment-item p {
+  min-height: 50px;
+}
