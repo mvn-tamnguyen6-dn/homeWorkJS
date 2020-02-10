@@ -57,7 +57,6 @@ function createListenerElementDeteleComment(listComment) {
 
   for (let index = 0; index < listComment.length; index++) {
     elementDeleteComments[index].addEventListener("click", function() {
-      //alert("Hello! I am an alesfsfrt box!" + elementDeleteComments[index].id);
       var remoIndex = elementDeleteComments[index].id - 1;
       listComment.splice(remoIndex, 1);
       showListComment(listComment);
@@ -96,13 +95,6 @@ function addComment() {
   showListComment(listComment);
 }
 
-// function listentDeleteComment() {
-//   for (let index = 0; index < array.length; index++) {
-//     const element = array[index];
-
-//   }
-// }
-
 function deleteComment() {
   deleteCommentInListComment();
   showListComment(listComment);
@@ -115,4 +107,3 @@ function deleteCommentInListComment(listComment, indexDelete) {
 
 showListComment(listComment);
 listentAddComment();
-//listentDeleteComment();
