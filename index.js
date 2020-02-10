@@ -81,7 +81,6 @@ function addCommentToListComment(listComment) {
       content: elementCommentContent.value,
     };
     listComment.push(newComment);
-    console.log(listComment);
   }
 }
 
@@ -102,7 +101,6 @@ function deleteComment() {
 
 function deleteCommentInListComment(listComment, indexDelete) {
   listComment.splice(indexDelete);
-  console.log(indexDelete + "sffffff" + listComment);
 }
 
 showListComment(listComment);
